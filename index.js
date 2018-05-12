@@ -21,3 +21,17 @@ function searchRepositories() {
     $("#results").html(responseString)
   })
 }
+
+function showCommits(repo) {
+    $.get(`https://api.github.com/repos/${repo.dataset.owner}/${repo.dataset.repository}/commits`, function(commits) {
+  commitsString = "<ul>" + commits.map(c => `<li>
+      <p>${c.sha}</p>
+      <p>Author: ${c.commit.author.name}</p>
+      <p>Author Login: ${c.author.login}</p>
+      <img src=${c.author.avatar_url}><br>
+    </li>`
+    ).join("") + "</ul>";
+
+    $("#details").html(commitsString);
+  });
+}
