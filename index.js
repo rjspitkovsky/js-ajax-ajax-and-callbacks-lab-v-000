@@ -14,6 +14,8 @@ function searchRepositories() {
     </li>`).join("") + "</ul>"
 
     $("#results").html(responseString)
+  }).fail(function(error) {
+    $("errors").html(displayError())
   })
 }
 
