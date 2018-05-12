@@ -10,11 +10,6 @@ function searchRepositories() {
       <a href=${item.html_url}>View on GitHub</a><br>
       <p>Owner: ${item.owner.login} - <a href="${item.owner.html_url}">View Profile</a></p>
       <img src=${item.owner.avatar_url}><br>
-
-
-      
-
-
       <a href="#" onclick="showCommits(this)" data-repository=${item.name} data-owner=${item.owner.name}>Show Commits</a><br>
     </li>`).join("") + "</ul>"
 
