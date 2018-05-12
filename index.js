@@ -12,6 +12,8 @@ function searchRepositories() {
       <img src=${item.owner.avatar_url}><br>
       <!--<a href="#" onclick="showCommits(this)" data-commits-url="${item.url}/commits">Show Commits</a><br>-->
       <a href="#" onclick="showCommits(this)" data-repository=${item.name} data-owner=${item.owner.name}>Show Commits</a><br>
-    </li>`))
+    </li>`).join("") + "</ul>"
+
+    $
   })
 }
