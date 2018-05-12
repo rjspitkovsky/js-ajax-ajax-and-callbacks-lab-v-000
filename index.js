@@ -14,4 +14,4 @@ function searchRepositories() {
       <a href="#" onclick="showCommits(this)" data-repository=${item.name} data-owner=${item.owner.name}>Show Commits</a><br>
     </li>`))
   })
-}tem
+}
